@@ -53,7 +53,6 @@ PROJECT_APPS = [
 
 THIRD_PARTY_APPS = [
     'django_extensions',
-    'django_crontab',
     'widget_tweaks',
 ]
 
@@ -148,9 +147,3 @@ STATICFILES_DIRS = (
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# django-crontab
-CRON_LOGFILE = '/cron/django_cron.log'
-CRONJOBS = [
-    ('1 2 * * 1,4,6', 'apps.kinoprincipal.cron.fetch_kino_results',
-     '>> /cron/django_cron.log 2>&1'),
-]

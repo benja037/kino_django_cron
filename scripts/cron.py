@@ -1,8 +1,11 @@
 import requests
-from .models import Kinodb, Rekinodb, Chanchitodb, Combodb, Chao1db, Chao2db, Chao3db
+from apps.kinoprincipal.models import Kinodb, Rekinodb, Chanchitodb, Combodb, Chao1db, Chao2db, Chao3db
 from bs4 import BeautifulSoup
 import datetime
 
+def run():
+    print("aaaaat")
+    fetch_kino_results()
 
 def fetch_kino_results():
     #print("HOLAAA")
@@ -57,7 +60,7 @@ def pasar_modelo(tipo_sorteo_db, tipo_numeros, numero_sorteo, fecha):
     number12 = tipo_numeros[11]
     number13 = tipo_numeros[12]
     number14 = tipo_numeros[13]
-    tipo_ingreso = "Cron"
+    tipo_ingreso = "Cron2"
 
     print(tipo_sorteo_db, fecha, numero_sorteo, number1, " ", number2, " ", number3, " ", number4, " ", number5, " ", number6, " ", number7, " ",
           number8, " ", number9, " ", number10, " ", number11, " ", number12, " ", number13, " ", number14, " ", tipo_ingreso)

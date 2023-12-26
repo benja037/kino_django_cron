@@ -11,15 +11,10 @@ COPY ./apps ./apps
 COPY ./kinostats ./kinostats
 COPY manage.py .
 COPY ./requirements.txt .
-COPY ./media ./media
-COPY ./static ./static
+
 
 RUN pip install -r requirements.txt
 
-# django-crontab logfile
-RUN mkdir /cron
-RUN touch /cron/django_cron.log
-
 EXPOSE 443
 
-CMD  service cron start && python manage.py crontab add && python manage.py runserver 0.0.0.0:443
+CMD python manage.py runscript cron
