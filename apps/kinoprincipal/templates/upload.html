@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Upload</h1>
+<!-- Upload form. Note enctype attribute! -->
+<form
+  action="{% url 'archivos_index' %}"
+  method="post"
+  enctype="multipart/form-data"
+>
+  {% csrf_token %}
+  <p>{{ form.file }}</p>
+  <p><input type="submit" value="Upload" /></p>
+</form>
+{% for archivo in lista_excel %}
+<p>{{ archivo.file}} - {{database}}</p>
+<div>
+  <h1>-----------------------</h1>
+  <button>
+    <a href="{% url 'delete-file' database archivo.pk %}"> Delete File </a>
+  </button>
+  <button>
+    <a href="{% url 'agregar-a-db' archivo.pk %}"> ToDatabase </a>
+  </button>
+</div>
+{% endfor %} {% endblock %}

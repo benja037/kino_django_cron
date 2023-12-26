@@ -1,0 +1,245 @@
+{% extends 'base.html' %} {% block content %}
+<div class="row">
+    <div class="col-12">
+        <form method="get">
+          <div class="table-responsive-sm">
+            <table class="table table-borderless fs-6 text-center">
+              <tbody>
+                <tr>                  
+                  <td style="padding: 0; margin: 0">
+                    {% if not lista_numeros_get.0 %}
+                    <input type="text" name="num1" class="form-control"/>
+                    {% endif %}
+                    {% if lista_numeros_get.0 %}
+                    <input type="text" name="num1" value = {{lista_numeros_get.0}} class="form-control"/>
+                    {% endif %}
+                  </td>
+                  <td style="padding: 0; margin: 0">
+                    {% if not lista_numeros_get.1 %}
+                    <input type="text" name="num2" class="form-control"/>
+                    {% endif %}
+                    {% if lista_numeros_get.1 %}
+                    <input type="text" name="num2" value = {{lista_numeros_get.1}} class="form-control"/>
+                    {% endif %}
+                  </td>
+                  <td style="padding: 0; margin: 0">
+                    {% if not lista_numeros_get.2 %}
+                    <input type="text" name="num3" class="form-control"/>
+                    {% endif %}
+                    {% if lista_numeros_get.2 %}
+                    <input type="text" name="num3" value = {{lista_numeros_get.2}} class="form-control"/>
+                    {% endif %}
+                  </td>
+                  <td style="padding: 0; margin: 0">
+                    {% if not lista_numeros_get.3 %}
+                    <input type="text" name="num4" class="form-control"/>
+                    {% endif %}
+                    {% if lista_numeros_get.3 %}
+                    <input type="text" name="num4" value = {{lista_numeros_get.3}} class="form-control"/>
+                    {% endif %}
+                  </td>
+                  <td style="padding: 0; margin: 0">
+                    {% if not lista_numeros_get.4 %}
+                    <input type="text" name="num5" class="form-control"/>
+                    {% endif %}
+                    {% if lista_numeros_get.4 %}
+                    <input type="text" name="num5" value = {{lista_numeros_get.4}} class="form-control"/>
+                    {% endif %}
+                  </td>
+                  <td style="padding: 0; margin: 0">
+                    {% if not lista_numeros_get.5 %}
+                    <input type="text" name="num6" class="form-control"/>
+                    {% endif %}
+                    {% if lista_numeros_get.5 %}
+                    <input type="text" name="num6" value = {{lista_numeros_get.5}} class="form-control"/>
+                    {% endif %}
+                  </td>
+                  <td style="padding: 0; margin: 0">
+                    {% if not lista_numeros_get.6 %}
+                    <input type="text" name="num7" class="form-control"/>
+                    {% endif %}
+                    {% if lista_numeros_get.6 %}
+                    <input type="text" name="num7" value = {{lista_numeros_get.6}} class="form-control"/>
+                    {% endif %}
+                  </td>
+                  <td style="padding: 0; margin: 0">
+                    {% if not lista_numeros_get.7 %}
+                    <input type="text" name="num8" class="form-control"/>
+                    {% endif %}
+                    {% if lista_numeros_get.7 %}
+                    <input type="text" name="num8" value = {{lista_numeros_get.7}} class="form-control"/>
+                    {% endif %}
+                  </td>
+                  <td style="padding: 0; margin: 0">
+                    {% if not lista_numeros_get.8 %}
+                    <input type="text" name="num9" class="form-control"/>
+                    {% endif %}
+                    {% if lista_numeros_get.8 %}
+                    <input type="text" name="num9" value = {{lista_numeros_get.8}} class="form-control"/>
+                    {% endif %}
+                  </td>
+                  <td style="padding: 0; margin: 0">
+                    {% if not lista_numeros_get.9 %}
+                    <input type="text" name="num10" class="form-control"/>
+                    {% endif %}
+                    {% if lista_numeros_get.9 %}
+                    <input type="text" name="num10" value = {{lista_numeros_get.9}} class="form-control"/>
+                    {% endif %}
+                  </td>
+                  <td style="padding: 0; margin: 0">
+                    {% if not lista_numeros_get.10 %}
+                    <input type="text" name="num11" class="form-control"/>
+                    {% endif %}
+                    {% if lista_numeros_get.10 %}
+                    <input type="text" name="num11" value = {{lista_numeros_get.10}} class="form-control"/>
+                    {% endif %}
+                  </td>
+                  <td style="padding: 0; margin: 0">
+                    {% if not lista_numeros_get.11 %}
+                    <input type="text" name="num12" class="form-control"/>
+                    {% endif %}
+                    {% if lista_numeros_get.11 %}
+                    <input type="text" name="num12" value = {{lista_numeros_get.11}} class="form-control"/>
+                    {% endif %}
+                  </td>
+                  <td style="padding: 0; margin: 0">
+                    {% if not lista_numeros_get.12 %}
+                    <input type="text" name="num13" class="form-control"/>
+                    {% endif %}
+                    {% if lista_numeros_get.12 %}
+                    <input type="text" name="num13" value = {{lista_numeros_get.12}} class="form-control"/>
+                    {% endif %}
+                  </td>   
+                  <td style="padding: 0; margin: 0">
+                    {% if not lista_numeros_get.13 %}
+                    <input type="text" name="num14" class="form-control"/>
+                    {% endif %}
+                    {% if lista_numeros_get.13 %}
+                    <input type="text" name="num14" value = {{lista_numeros_get.13}} class="form-control"/>
+                    {% endif %}
+                  </td>                  
+              </tbody>
+            </table>
+          </div>
+        <div class="pt-4">
+            <button type="submit">Save</button>
+        </div>
+      </form>
+    </div>
+</div>
+<h1>Coincidencias para Kino</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="table-responsive">
+        <table class="table table-sm table-borderless fs-6 text-center">
+          <tbody>
+            {% for p in coincidencias_Kinodb %} {% include 'partials/rows.html' %}
+            {%endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h1>Coincidencias para rekino</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="table-responsive">
+        <table class="table table-sm table-borderless fs-6 text-center">
+          <tbody>
+            {% for p in coincidencias_Rekinodb %} {% include 'partials/rows.html' %}
+            {%endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h1>Coincidencias para Chanchito</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="table-responsive">
+        <table class="table table-sm table-borderless fs-6 text-center">
+          <tbody>
+            {% for p in coincidencias_Chanchitodb %} {% include 'partials/rows.html' %}
+            {%endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h1>Coincidencias para Combo</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="table-responsive">
+        <table class="table table-sm table-borderless fs-6 text-center">
+          <tbody>
+            {% for p in coincidencias_Combodb %} {% include 'partials/rows.html' %}
+            {%endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h1>Coincidencias para Chao1</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="table-responsive">
+        <table class="table table-sm table-borderless fs-6 text-center">
+          <tbody>
+            {% for p in coincidencias_Chao1db %} {% include 'partials/rows.html' %}
+            {%endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<h1>Coincidencias para Chao2</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="table-responsive">
+        <table class="table table-sm table-borderless fs-6 text-center">
+          <tbody>
+            {% for p in coincidencias_Chao2db %} {% include 'partials/rows.html' %}
+            {%endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<h1>Coincidencias para Chao3</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="table-responsive">
+        <table class="table table-sm table-borderless fs-6 text-center">
+          <tbody>
+            {% for p in coincidencias_Chao3db %} {% include 'partials/rows.html' %}
+            {%endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock%}

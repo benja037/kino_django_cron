@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{% url 'index' %}">Estadísticas kino y otros</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'index' %}">Home</a>
+      </li>      
+      <li class="nav-item dropdown">
+        <button class="btn btn-light dropdown-toggle" type="button" id="navbarDropdown1" data-bs-toggle="dropdown" aria-expanded="false">
+          Base de Datos
+        </button>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+          <a class="dropdown-item" href="{% url 'kino_index' %}">Resultados Kino</a>
+          <a class="dropdown-item" href="{% url 'rekino_index' %}">Resultados Rekino</a>
+          <a class="dropdown-item" href="{% url 'chanchito_index' %}">Resultados Chanchito</a>
+          <a class="dropdown-item" href="{% url 'combo_index' %}">Resultados Combo</a>
+          <a class="dropdown-item" href="{% url 'chao1_index' %}">Resultados Chao1</a>
+          <a class="dropdown-item" href="{% url 'chao2_index' %}">Resultados Chao2</a>
+          <a class="dropdown-item" href="{% url 'chao3_index' %}">Resultados Chao3</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'coincidencias_index' %}">Coincidencias </a>
+      </li>        
+      <li class="nav-item dropdown">
+        <button class="btn btn-light dropdown-toggle" type="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          Estadísticas
+        </button>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{% url 'estadisticas_kino_index' %}">Estadísticas Kino</a>
+          <a class="dropdown-item" href="{% url 'estadisticas_rekino_index' %}">Estadísticas Rekino</a>
+          <a class="dropdown-item" href="{% url 'estadisticas_chanchito_index' %}">Estadísticas Chanchito</a>
+          <a class="dropdown-item" href="{% url 'estadisticas_combo_index' %}">Estadísticas Combo</a>
+          <a class="dropdown-item" href="{% url 'estadisticas_chao1_index' %}">Estadísticas Chao1</a>
+          <a class="dropdown-item" href="{% url 'estadisticas_chao2_index' %}">Estadísticas Chao2</a>
+          <a class="dropdown-item" href="{% url 'estadisticas_chao3_index' %}">Estadísticas Chao3</a>
+        </div>
+      </li>
+      
+      
+    </ul>    
+  </div>
+</nav>

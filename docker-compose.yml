@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+    webapp:
+        build: .        
+        container_name: django-kino2
+        volumes:
+            - .:/usr/src/
+        env_file: .env
+        ports:
+            - 443:443
