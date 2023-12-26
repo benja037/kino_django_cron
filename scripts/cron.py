@@ -35,13 +35,19 @@ def fetch_kino_results():
     resultados_chao1 = numeros[56:70]
     resultados_chao2 = numeros[70:84]
     resultados_chao3 = numeros[84:98]
-
+    print("kino")
     pasar_modelo(Kinodb, resultados_kino, sorteo, fecha_ayer)
+    print("rekino")
     pasar_modelo(Rekinodb, resultados_rekino, sorteo, fecha_ayer)
+    print("chanchito")
     pasar_modelo(Chanchitodb, resultados_chanchito, sorteo, fecha_ayer)
+    print("combo")
     pasar_modelo(Combodb, resultados_combo, sorteo, fecha_ayer)
+    print("chao1")
     pasar_modelo(Chao1db, resultados_chao1, sorteo, fecha_ayer)
+    print("chao2")
     pasar_modelo(Chao2db, resultados_chao2, sorteo, fecha_ayer)
+    print("chao3")
     pasar_modelo(Chao3db, resultados_chao3, sorteo, fecha_ayer)
 
 
